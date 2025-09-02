@@ -47,9 +47,13 @@ This is a **web-based airline ticket booking system** where users can register, 
 
 ---
 
-## Author
+## Contributors
 
-Developed by **Abhishek Dhapola**
+**Abhishek Dhapola**
+**Akansha Joshi**
+**Aditya Mehra**
+**Deepak Kumar Kabi**
+
 
 ---
 
