@@ -1,0 +1,50 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.card, #dashboard {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  width: 90%;
+  max-width: 550px;
+  margin: 20px;
+  transition: all 0.3s ease-in-out;
+}
+h2 { text-align: center; margin-top: 0; }
+input, select, button {
+  width: 100%; padding: 14px; margin: 10px 0;
+  border-radius: 12px; font-size: 16px; border: 1px solid #ccc;
+}
+button {
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  color: white; border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+button:hover { background: linear-gradient(45deg, #0072ff, #00c6ff); }
+.available { background: #e0f7fa; cursor: pointer; }
+.booked { background: #aaa; color: white; }
+.selected { background: #28a745; color: white; }
+.user-seat { background: orange; color: white; }
+td {
+  width: 45px; height: 45px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+.nav-btns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}

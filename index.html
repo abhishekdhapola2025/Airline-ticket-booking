@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GNDU Airline Booking</title>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card" id="authCard">
+  <h2>Sign In</h2>
+  <input id="signinEmail" placeholder="Email">
+  <input id="signinPassword" type="password" placeholder="Password">
+  <button id="signinBtn">Sign In</button>
+  <hr>
+  <p>Don't have an account? Sign Up below:</p>
+  <input id="signupEmail" placeholder="Email">
+  <input id="signupPassword" type="password" placeholder="Password">
+  <button id="signupBtn">Sign Up</button>
+  <p id="signinError" style="color:red;"></p>
+</div>
+
+<div class="card" id="dashboard" style="display:none">
+  <h2>Book Ticket</h2>
+  <select id="fromLocation">
+    <option value="Delhi">Delhi</option>
+    <option value="Mumbai">Mumbai</option>
+    <option value="Bangalore">Bangalore</option>
+    <option value="Chandigarh">Chandigarh</option>
+  </select>
+  <select id="toLocation">
+    <option value="Delhi">Delhi</option>
+    <option value="Mumbai">Mumbai</option>
+    <option value="Bangalore">Bangalore</option>
+    <option value="Chandigarh">Chandigarh</option>
+  </select>
+  <input id="travelDate" type="date">
+  <select id="bookingClass">
+    <option value="Economy">Economy</option>
+    <option value="Business">Business</option>
+    <option value="First">First</option>
+  </select>
+  <input id="bookingPassengers" type="number" placeholder="Number of Passengers">
+  <select id="seatType">
+    <option value="Window">Window</option>
+    <option value="Aisle">Aisle</option>
+    <option value="Other">Other</option>
+  </select>
+
+  <!-- Passenger details container -->
+  <div id="passengerDetailsContainer"></div>
+
+  <button onclick="bookSeats()">Book Ticket</button>
+  <div class="nav-btns">
+    <button onclick="loadSeatMap()">Show Seat Map</button>
+    <button onclick="cancelTicket()">Cancel Ticket</button>
+    <button onclick="openAdminPanel()">Admin Panel</button>
+  </div>
+  <div id="pricePreview"></div>
+  <table id="seatmapTable" style="margin-top:20px;"></table>
+  <button id="logoutBtn">Logout</button>
+</div>
+
+<!-- App Script -->
+<script src="app.js"></script>
+</body>
+</html>
